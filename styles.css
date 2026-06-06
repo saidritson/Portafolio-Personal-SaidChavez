@@ -1,0 +1,158 @@
+:root {
+    --primary-color: #0056b3;
+    --primary-dark: #003d82;
+    --secondary-color: #e2f0ff;
+    --text-color: #333333;
+    --text-light: #666666;
+    --bg-color: #f8f9fa;
+    --card-bg: #ffffff;
+    --border-radius: 8px;
+    --spacing: 20px;
+}
+
+/* --- Estilos Generales --- */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Tipografía más moderna */
+    background-color: var(--bg-color);
+    font-size: 1.1rem; /* 2rem era demasiado grande para texto base */
+    color: var(--text-color);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100dvh;
+    justify-content: center;
+}
+
+h1, h2, h3 {
+    color: var(--primary-color); /* Cambiado de marrón a azul para dar coherencia */
+    margin-top: 0;
+}
+
+h2:before {
+    content: "• "; /* Un punto limpio en lugar de guiones */
+    color: var(--primary-color);
+}
+
+/* --- Header y Footer --- */
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: var(--spacing);
+    text-align: center;
+}
+
+header p {
+    color: var(--secondary-color);
+    margin: 5px 0 0 0;
+}
+
+/* --- Contenedor Principal --- */
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing);
+    padding: var(--spacing);
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto; /* Centra el contenido en pantallas grandes */
+    box-sizing: border-box;
+}
+
+/* --- Secciones (Tarjetas) --- */
+#sobremi, #formacion, #habilidades, #contacto {
+    background-color: var(--card-bg);
+    border: 1px solid #e1e4e8; /* Añadido 'solid' para que el borde exista */
+    border-radius: var(--border-radius);
+    padding: 30px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05); /* Sombra más suave y moderna */
+    transition: transform 0.2s;
+}
+
+/* --- Componentes Específicos --- */
+.title {
+    background-color: var(--secondary-color); /* Coherente con la paleta */
+    border-left: 5px solid var(--primary-color); /* Detalle elegante en el lateral */
+    border-radius: var(--border-radius);
+    padding: var(--spacing);
+    margin-bottom: var(--spacing);
+    font-weight: 600;
+}
+
+.foto-perfil {
+    float: right;
+    margin-left: var(--spacing);
+    margin-bottom: 10px;
+    border-radius: 50%; /* Círculo perfecto */
+    border: 3px solid var(--secondary-color);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Enlaces (Botones) */
+a {
+    display: inline-flex; /* 'inline-flex' evita que ocupe todo el ancho si no es necesario */
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    text-decoration: none;
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+    padding: 10px 20px;
+    border-radius: var(--border-radius);
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Listas */
+li:first-child {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+/* --- Tablas --- */
+.tabla_bonita {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    border-radius: var(--border-radius);
+    overflow: hidden; /* Para que las esquinas de la tabla respeten el border-radius */
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.tabla_bonita th {
+    padding: 12px 15px;
+    text-align: left;
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: 600;
+}
+
+.tabla_bonita td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #eeeeee; /* Líneas divisorias más sutiles */
+    color: var(--text-color);
+}
+
+.tabla_bonita tr:nth-child(even) {
+    background-color: #fcfdfe; /* Un gris/azul muy sutil en vez de aqua chillón */
+}
+
+.foto-perfil {
+    border-radius: 50%; /* Esto la hace redonda, ideal para fotos de perfil */
+    object-fit: cover; /* Evita que la imagen se deforme si no es perfectamente cuadrada */
+
+    /* La clave: prepara la animación para que sea suave */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Lo que pasa al pasar el mouse */
+.foto-perfil:hover {
+    transform: translateY(-5px); /* La mueve 5 píxeles hacia arriba */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Añade una sombra suave abajo */
+}

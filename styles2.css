@@ -1,0 +1,234 @@
+:root {
+    --bg-main: #121214;       /* Fondo oscuro profundo */
+    --bg-card: #1a1a1e;       /* Fondo de las secciones */
+    --accent-purple: #9d4edd; /* Morado neón para detalles */
+    --accent-glow: #c77dff;   /* Violeta claro para hovers */
+    --text-main: #f8f9fa;     /* Texto principal claro */
+    --text-muted: #adb5bd;    /* Texto secundario gris */
+    --border-radius: 12px;
+}
+
+/* --- Estilos Generales --- */
+body {
+    font-family: 'Poppins', system-ui, -apple-system, sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.contenedor{
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    gap: 10px;
+    border: 2px solid blue;
+    padding: 10px;
+    justify-content: center;
+}
+.caja{
+    width: 100px;
+    height: 100px;
+    border: 2px solid blue;
+    justify-content: center;
+    align-items: center;
+
+}
+.caja img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Esto hace que la imagen llene el cuadro sin deformarse */
+    display: block;    /* Elimina un pequeño espacio en blanco que el HTML deja abajo de las imágenes */
+}
+
+.caja2 {
+    width: 300px;
+    height: 100px;
+    border: 2px solid blue;
+    justify-content: center;
+    align-items: center;
+
+}
+.caja2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Esto hace que la imagen llene el cuadro sin deformarse */
+    display: block;    /* Elimina un pequeño espacio en blanco que el HTML deja abajo de las imágenes */
+}
+
+/* --- Encabezado y Navegación --- */
+header {
+    background-color: var(--bg-card);
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #2a2a30;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    background: linear-gradient(45deg, var(--accent-purple), var(--accent-glow));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+/* Enlaces del Menú */
+nav ul a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+nav ul a:hover {
+    color: var(--text-main);
+    background-color: rgba(157, 78, 221, 0.15);
+    box-shadow: 0 0 15px rgba(157, 78, 221, 0.2);
+}
+
+/* --- Contenedor Principal --- */
+main {
+    max-width: 900px;
+    width: 100%;
+    margin: 40px auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    flex: 1; /* Empuja el footer hacia abajo */
+}
+
+section {
+    background-color: var(--bg-card);
+    padding: 30px;
+    border-radius: var(--border-radius);
+    border: 1px solid #2a2a30;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+    color: var(--accent-glow);
+    font-size: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 20px;
+    border-left: 4px solid var(--accent-purple);
+    padding-left: 12px;
+}
+
+h3 {
+    color: var(--text-main);
+    font-size: 1.15rem;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+/* --- Listas --- */
+ul, ol {
+    padding-left: 20px;
+    color: var(--text-muted);
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+/* Resaltar los primeros elementos de las listas de hobbies */
+section ul li:first-child,
+section ol li:first-child {
+    color: var(--accent-glow);
+    font-weight: 500;
+}
+
+/* --- Tabla de Logros --- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #121214;
+    border-radius: 8px;
+    overflow: hidden;
+    border: none; /* Elimina el borde antiguo del HTML */
+}
+
+th {
+    background-color: var(--accent-purple);
+    color: white;
+    padding: 14px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+td {
+    padding: 14px;
+    border-bottom: 1px solid #2a2a30;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+tr:hover td {
+    background-color: rgba(255, 255, 255, 0.02);
+    color: var(--text-main);
+}
+
+/* --- Footer --- */
+footer {
+    background-color: #0b0b0d;
+    padding: 30px 20px;
+    text-align: center;
+    border-top: 1px solid #2a2a30;
+    margin-top: auto;
+}
+
+footer p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+/* Redes Sociales del Footer */
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+footer ul a {
+    color: var(--accent-glow);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: color 0.2s ease, transform 0.2s ease;
+    display: inline-block;
+}
+
+footer ul a:hover {
+    color: white;
+    transform: translateY(-2px); /* Pequeño brinco al pasar el mouse */
+}
