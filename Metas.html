@@ -1,9 +1,57 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mis Metas</title>
+    <link rel="stylesheet" href="style3.css">
+    <style>
+        /* Grid principal en body */
+        body {
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+            grid-template-areas:
+                "header"
+                "main"
+                "footer";
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        header { grid-area: header; }
+        main   { grid-area: main; }
+        footer { grid-area: footer; }
+
+        /* Imágenes de metas */
+        .metas-imagenes {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin: 20px 0;
+        }
+
+        .meta-img-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .meta-img-card img {
+            width: 220px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+        }
+
+        .meta-img-card figcaption {
+            font-size: 0.85rem;
+            color: #555;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
 
@@ -21,7 +69,6 @@
 
 <main>
 
-
     <section>
         <h2>Objetivos Personales y Profesionales</h2>
 
@@ -30,6 +77,18 @@
             <li>Aprender las bases de HTML semántico y CSS.</li>
             <li>Terminar verano y el siguiente semestre.</li>
         </ul>
+
+        <!-- Imágenes de las metas -->
+        <div class="metas-imagenes">
+            <figure class="meta-img-card">
+                <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=250&fit=crop" alt="Aprender programación web">
+                <figcaption>Aprender HTML y CSS</figcaption>
+            </figure>
+            <figure class="meta-img-card">
+                <img src="imagenes/imagen7.jpg" alt="Terminar semestre universitario">
+                <figcaption>Terminar el semestre</figcaption>
+            </figure>
+        </div>
 
         <h3>Pasos para alcanzarlas (Lista ordenada)</h3>
         <ol>
@@ -69,6 +128,22 @@
             </tr>
             </tbody>
         </table>
+
+        <!-- Imágenes del plan de acción -->
+        <div class="metas-imagenes" style="margin-top: 20px;">
+            <figure class="meta-img-card">
+                <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400&h=250&fit=crop" alt="Desarrollo web frontend">
+                <figcaption>Dominar el Frontend</figcaption>
+            </figure>
+            <figure class="meta-img-card">
+                <img src="https://images.unsplash.com/photo-1546410531-bb4caa6b424d?w=400&h=250&fit=crop" alt="Aprender un idioma">
+                <figcaption>Aprender un idioma</figcaption>
+            </figure>
+            <figure class="meta-img-card">
+                <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=400&h=250&fit=crop" alt="Aprender una canción en inglés">
+                <figcaption>Aprender una canción en inglés</figcaption>
+            </figure>
+        </div>
     </section>
 
 </main>
@@ -79,10 +154,9 @@
     <p>Sígueme en:</p>
     <ul>
         <li><a href="https://github.com/saidritson" target="_blank">GitHub</a></li>
-        <li><a href="https://www.tiktok.com/@said_roel05" target="_blank" >Tiktok</a></li>
-        <li><a href="https://www.instagram.com/saidroel_" target="_blank" >Instagram</a></li>
-        <li><a href="https://x.com/saidroel_" target="_blank" >X (Twitter)</a></li>
-
+        <li><a href="https://www.tiktok.com/@said_roel05" target="_blank">Tiktok</a></li>
+        <li><a href="https://www.instagram.com/saidroel_" target="_blank">Instagram</a></li>
+        <li><a href="https://x.com/saidroel_" target="_blank">X (Twitter)</a></li>
     </ul>
 </footer>
 
