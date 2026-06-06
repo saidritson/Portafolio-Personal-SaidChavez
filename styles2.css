@@ -44,6 +44,21 @@ body {
     display: block;    /* Elimina un pequeño espacio en blanco que el HTML deja abajo de las imágenes */
 }
 
+.caja2 {
+    width: 300px;
+    height: 100px;
+    border: 2px solid blue;
+    justify-content: center;
+    align-items: center;
+
+}
+.caja2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Esto hace que la imagen llene el cuadro sin deformarse */
+    display: block;    /* Elimina un pequeño espacio en blanco que el HTML deja abajo de las imágenes */
+}
+
 /* --- Encabezado y Navegación --- */
 header {
     background-color: var(--bg-card);
